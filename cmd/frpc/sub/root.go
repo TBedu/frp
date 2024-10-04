@@ -139,6 +139,7 @@ func startService(
 	log.InitLogger(cfg.Log.To, cfg.Log.Level, int(cfg.Log.MaxDays), cfg.Log.DisablePrintColor)
 
 	if cfgFile != "" {
+		log.Infof("Welcome to TaskBoardFrp!")
 		log.Infof("start frpc service for config file [%s]", cfgFile)
 		defer log.Infof("frpc service for config file [%s] stopped", cfgFile)
 	}
